@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonu Herath — Travel & Ticketing Executive</title>
+  <meta name="description" content="Portfolio and professional page for Sonu Herath — Travel & Ticketing Executive. Travelport, Amadeus, Sabre, NDC, airline portals, ticketing, issuing, reissuing, automation and design." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    :root {
+      --bg-1: #ffffff; --bg-2: #f5f7fa; --card: #ffffff; --text: #1d1d1f; --text-muted: #86868b; 
+      --accent1: #0071e3; --accent2: #34c759; --accent3: #af52de; --accent4: #ff9500;
+      --success: #34c759; --danger: #ff3b30; --border: rgba(0,0,0,0.08);
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.05); --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+      --radius-sm: 12px; --radius-md: 18px; --radius-lg: 24px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+                background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%); color: var(--text); 
+                line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent1); text-decoration: none; transition: var(--transition); }
+    
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; }
+    
+    /* Background effects */
+    .bg-effect { position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                background: radial-gradient(circle at 15% 50%, rgba(180, 220, 255, 0.2) 0%, transparent 30%),
+                           radial-gradient(circle at 85% 30%, rgba(200, 230, 255, 0.2) 0%, transparent 30%);
+                z-index: -1; pointer-events: none; }
+    
+    /* Container and layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+    .card { background: var(--card); border-radius: var(--radius-lg); padding: 36px; 
+            box-shadow: var(--shadow-md); margin-bottom: 32px; border: 1px solid var(--border); 
+            transition: var(--transition); }
+    .card:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.1); transform: translateY(-5px); }
+    
+    /* Header section */
+    header { display: flex; gap: 28px; align-items: center; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+    .avatar { width: 120px; height: 120px; border-radius: 28px; 
+              display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; 
+              font-size: 36px; box-shadow: var(--shadow-md); transition: var(--transition);
+              background-size: cover; background-position: center; }
+    .avatar:hover { transform: scale(1.05); }
+    h1 { margin: 0; font-size: 36px; font-weight: 700; letter-spacing: -0.5px; }
+    .subtitle { color: var(--text-muted); margin-top: 8px; font-size: 18px; font-weight: 400; }
+    .hero-actions { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+    
+    /* Buttons */
+    .btn { background: linear-gradient(90deg, var(--accent1), var(--accent3)); color: white; padding: 14px 24px; 
+           border-radius: 12px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; 
+           gap: 8px; box-shadow: var(--shadow-sm); transition: var(--transition); border: none; cursor: pointer; 
+           font-size: 16px; }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,113,227,0.25); }
+    .btn.ghost { background: transparent; border: 1px solid var(--border); color: var(--text-muted); 
+                font-weight: 500; }
+    .btn.ghost:hover { background: rgba(0,0,0,0.03); color: var(--text); }
+    
+    /* Grid layout */
+    .grid { display: grid; grid-template-columns: 1fr 380px; gap: 28px; margin-top: 32px; }
+    .section { margin-bottom: 28px; }
+    .section h3 { margin: 0 0 12px; font-size: 24px; font-weight: 700; }
+    .lead { color: var(--text-muted); line-height: 1.7; font-size: 17px; }
+    
+    /* Skill categories */
+    .skill-categories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .category { background: var(--bg-2); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);
+                transition: var(--transition); }
+    .category:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); }
+    .category h4 { margin: 0 0 12px; font-size: 18px; font-weight: 600; }
+    .category ul { margin: 0; padding-left: 20px; color: var(--text-muted); }
+    .category li { margin-bottom: 6px; }
+    
+    .skills-inline { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .chip { background: rgba(0,113,227,0.08); padding: 8px 14px; border-radius: 20px; font-weight: 500; 
+            color: var(--accent1); border: 1px solid rgba(0,113,227,0.1); font-size: 14px; transition: var(--transition); }
+    .chip:hover { background: rgba(0,113,227,0.12); transform: translateY(-2px); }
+    
+    /* Skill bars */
+    .skill-row { margin: 16px 0; }
+    .skill-label { display: flex; justify-content: space-between; font-size: 15px; color: var(--text-muted); margin-bottom: 8px; }
+    .bar { height: 10px; background: rgba(0,0,0,0.06); border-radius: 10px; overflow: hidden; }
+    .bar > .fill { height: 100%; width: 0%; border-radius: 10px; background: linear-gradient(90deg, var(--accent1), var(--accent3)); 
+                  transition: width 1200ms cubic-bezier(0.22, 0.61, 0.36, 1); }
+    
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .proj { background: var(--bg-2); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border);
+            transition: var(--transition); min-height: 140px; display: flex; flex-direction: column; gap: 12px; }
+    .proj:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); }
+    .proj h4 { margin: 0; font-size: 17px; font-weight: 600; }
+    .proj p { color: var(--text-muted); font-size: 15px; margin: 0; }
+    
+    /* Sidebar */
+    aside { background: var(--bg-2); padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border); }
+    .socials { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    
+    .social { display: inline-flex; gap: 8px; align-items: center; padding: 12px 16px; border-radius: 10px; 
+              background: white; border: 1px solid var(--border); font-weight: 500; color: var(--text); 
+              text-decoration: none; transition: var(--transition); }
+    .social:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+    .social svg { width: 18px; height: 18px; }
+    
+    footer { margin-top: 32px; color: var(--text-muted); font-size: 14px; text-align: center; }
+    
+    /* Form elements */
+    input, textarea { width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--border); 
+                     background: white; font-family: inherit; font-size: 16px; transition: var(--transition); }
+    input:focus, textarea:focus { outline: none; border-color: var(--accent1); box-shadow: 0 0 0 4px rgba(0,113,227,0.1); }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    button.send { margin-top: 12px; }
+    
+    /* Responsive design */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .row { grid-template-columns: 1fr; }
+      .skill-categories { grid-template-columns: 1fr; }
+      .projects { grid-template-columns: 1fr; }
+      header { flex-direction: column; text-align: center; }
+      .avatar { width: 100px; height: 100px; font-size: 28px; }
+      h1 { font-size: 28px; }
+    }
+    
+    /* Micro-interactions */
+    .chip, .proj, .category { cursor: pointer; }
+    
+    /* Mini-game modal */
+    .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; 
+             justify-content: center; z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+    .modal.active { opacity: 1; visibility: visible; }
+    .modal-card { width: 800px; max-width: 90%; background: white; padding: 24px; border-radius: var(--radius-lg); 
+                 box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); transform: translateY(20px); 
+                 transition: transform 0.4s ease; position: relative; }
+    .modal.active .modal-card { transform: translateY(0); }
+    .mini-canvas { background: var(--bg-2); border-radius: 12px; display: block; width: 100%; 
+                  border: 1px solid var(--border); }
+    .close-x { position: absolute; top: 20px; right: 20px; background: transparent; border: none; 
+              color: var(--text-muted); font-size: 24px; cursor: pointer; transition: var(--transition); }
+    .close-x:hover { color: var(--text); transform: rotate(90deg); }
+    
+    /* Collected category highlight */
+    .category.collected { box-shadow: 0 10px 30px rgba(52,199,89,0.2); border-color: rgba(52,199,89,0.3); }
+    
+    /* Game instructions */
+    .game-instructions { background: var(--bg-2); padding: 12px 16px; border-radius: 10px; margin: 12px 0; 
+                        border: 1px solid var(--border); }
+    
+    /* Badge counter */
+    .badge-counter { display: flex; gap: 8px; align-items: center; margin-top: 12px; }
+    .badge { width: 20px; height: 20px; border-radius: 50%; background: var(--accent1); display: inline-flex; 
+             align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: 600; }
+    
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .floating { animation: float 5s ease-in-out infinite; }
+    
+    /* Windows progress bar */
+    .progress-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .progress-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .progress-window {
+      background: white;
+      border-radius: 8px;
+      width: 400px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .progress-header {
+      background: linear-gradient(90deg, #000080, #1084d0);
+      color: white;
+      padding: 12px 16px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .progress-body {
+      padding: 20px;
+    }
+    
+    .progress-text {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    
+    .progress-bar-container {
+      height: 20px;
+      background: #e0e0e0;
+      border: 1px solid #a0a0a0;
+      position: relative;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #0080ff, #00b0ff);
+      transition: width 0.5s ease;
+    }
+    
+    .progress-file {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .progress-close {
+      background: linear-gradient(180deg, #ece9d8, #d6d3c6);
+      border: 1px solid #adaba0;
+      padding: 4px 15px;
+      margin-top: 15px;
+      cursor: pointer;
+      float: right;
+      font-size: 12px;
+    }
+    
+    .progress-close:active {
+      background: linear-gradient(180deg, #d6d3c6, #ece9d8);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-effect"></div>
+
+  <!-- Windows-style progress modal -->
+  <div class="progress-modal" id="progressModal">
+    <div class="progress-window">
+      <div class="progress-header">
+        <span>Exporting CV to PDF</span>
+        <span style="cursor: pointer;" id="closeProgress">✕</span>
+      </div>
+      <div class="progress-body">
+        <div class="progress-text">Creating PDF document...</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="progress-file" id="progressFile">Preparing document: Sonu_Herath_CV.pdf</div>
+        <button class="progress-close" id="progressClose" disabled>Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="card floating" id="cv-content">
+      <header>
+        <div class="avatar" id="profile-avatar">SH</div>
+        <div style="flex:1">
+          <h1>Herath D. M. S. Sonu</h1>
+          <div class="subtitle">Travel & Ticketing Executive — Booking Management · Ticketing · Reissues · Travelport</div>
+          <div class="hero-actions">
+            <a class="btn" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            <a class="btn ghost" href="#skills"><i class="fas fa-code"></i> Skills</a>
+            <a class="btn ghost" href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <button id="playGame" class="btn" aria-haspopup="dialog"><i class="fas fa-gamepad"></i> Play mini-game</button>
+            <button id="exportPdf" class="btn"><i class="fas fa-file-pdf"></i> Export CV</button>
+          </div>
+        </div>
+        <div style="width:220px;text-align:right">
+          <div style="font-size:14px;color:var(--text-muted)">Availability</div>
+          <div style="font-weight:700;color:var(--accent1)">Not open to work</div>
+          <div style="margin-top:14px">
+            <a class="social" href="mailto:sonu@2ndchancetravels.com">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="grid">
+        <div>
+          <section id="about" class="section">
+            <h3>Professional summary</h3>
+            <p class="lead">Travel & Ticketing Executive with hands-on experience in airline ticketing, booking management, ticket issuance, and reissuance. Over the past <strong>8 months</strong> I've worked intensively with <strong>Travelport (primary)</strong>, and also used <strong>Amadeus</strong>, <strong>Sabre</strong>, airline portals, and NDC platforms. I handle fare rules, changes, refunds, and customer care while contributing to automation and reporting solutions to improve operational efficiency.</p>
+          </section>
+
+          <section id="skills" class="section">
+            <h3>Skills — Categorized</h3>
+            <p class="lead">Skills are grouped into clear categories to make it easy for viewers and recruiters to scan. Play the mini-game to "collect" each category and highlight it on the page.</p>
+
+            <div class="skill-categories">
+              <div id="cat-design" class="category">
+                <h4><i class="fas fa-paint-brush" style="color: var(--accent4);"></i> Vector Graphics & Animations</h4>
+                <ul>
+                  <li>Vector illustration (Adobe Illustrator / Figma)</li>
+                  <li>Motion & micro-animations</li>
+                  <li>Social & marketing assets</li>
+                  <li>UI icons & illustrations</li>
+                </ul>
+                <div class="skills-inline"><span class="chip">Vectors</span><span class="chip">Animations</span><span class="chip">Marketing</span></div>
+              </div>
+
+              <div id="cat-ticketing" class="category">
+                <h4><i class="fas fa-ticket-alt" style="color: var(--accent1);"></i> Ticketing (GDS, NDC & Airline portals)</h4>
+                <ul>
+                  <li>Travelport (Galileo / Smartpoint)</li>
+                  <li>Amadeus & Sabre</li>
+                  <li>NDC platforms & airline portals</li>
+                  <li>PNR management, fare construction, refunds</li>
+                </ul>
+                <div class="skills-inline"><span class="chip">Travelport</span><span class="chip">Amadeus</span><span class="chip">Sabre</span><span class="chip">NDC</span></div>
+              </div>
+
+              <div id="cat-it" class="category">
+                <h4><i class="fas fa-server" style="color: var(--accent2);"></i> IT & Maintenance</h4>
+                <ul>
+                  <li>Google Workspace admin & Drive organization</li>
+                  <li>System maintenance & automation workflows</li>
+                  <li>Shift reporting & operations monitoring</li>
+                  <li>Helpdesk-style technical support</li>
+                </ul>
+                <div class="skills-inline"><span class="chip">Google Workspace</span><span class="chip">Reporting</span><span class="chip">Maintenance</span></div>
+              </div>
+
+              <div id="cat-programming" class="category">
+                <h4><i class="fas fa-code" style="color: var(--accent3);"></i> Programming with AI & Scripting</h4>
+                <ul>
+                  <li>React.js (basic/interactive UI)</li>
+                  <li>Google Apps Script (automation)</li>
+                  <li>AutoHotkey (desktop scripting)</li>
+                  <li>AI-assisted development workflows</li>
+                  <li>AI Tools: ChatGPT, Gemini, Claude, NotebookLM</li>
+                  <li>Google Image Generation</li>
+                </ul>
+                <div class="skills-inline"><span class="chip">React.js</span><span class="chip">Apps Script</span><span class="chip">AutoHotkey</span><span class="chip">AI Tools</span></div>
+              </div>
+            </div>
+
+            <div style="margin-top:20px">
+              <div class="skill-row">
+                <div class="skill-label"><span>Overall Ticketing</span><span>86%</span></div>
+                <div class="bar"><div class="fill" data-width="86%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>Design & Animation</span><span>78%</span></div>
+                <div class="bar"><div class="fill" data-width="78%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>Automation & Scripting</span><span>74%</span></div>
+                <div class="bar"><div class="fill" data-width="74%"></div></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="experience" class="section">
+            <h3>Experience</h3>
+            <div class="lead" style="margin-bottom:12px"><strong>2nd Chance Travels</strong> — Travel & Ticketing (current)
+            <br>Responsibilities: Booking management, ticket issuance, reissue/voids, fare checks, customer communications, and building automation/reporting tools to support operations.</div>
+
+            <h4 style="margin-top:12px">Highlights</h4>
+            <ul style="color:var(--text-muted);margin-top:8px;line-height:1.6">
+              <li>Managed PNRs and fare re-pricing across Travelport, Amadeus and Sabre.</li>
+              <li>Executed ticket reissues and refunds while following airline fare rules and taxes.</li>
+              <li>Built Google Sheets automations and reporting templates to remove manual tasks.</li>
+            </ul>
+          </section>
+
+          <section id="portfolio" class="section">
+            <h3>Selected work & process</h3>
+            <p class="lead">Design and process samples are available on request. I generally avoid publicly linking my full Behance portfolio — happy to share specific work if needed.</p>
+
+            <div class="projects">
+              <div class="proj">
+                <h4><i class="fas fa-cogs" style="color: var(--accent1);"></i> Automation: Form → Drive Organizer</h4>
+                <p>Google Forms + Apps Script that creates a folder per submitter and stores files in organized subfolders (Docs automation).</p>
+              </div>
+              <div class="proj">
+                <h4><i class="fas fa-ticket-alt" style="color: var(--accent2);"></i> Ticketing Scripts & Templates</h4>
+                <p>Reusable templates and scripts for PNR updates and fare checks to speed ticket edits in GDS.</p>
+              </div>
+              <div class="proj">
+                <h4><i class="fas fa-paint-brush" style="color: var(--accent3);"></i> Design: Vector & Animations</h4>
+                <p>Graphic design samples and vector animations used for marketing campaigns and social assets.</p>
+              </div>
+              <div class="proj">
+                <h4><i class="fas fa-chart-line" style="color: var(--accent4);"></i> Reporting: Night Shift Duties</h4>
+                <p>Operational dashboards and shift reports that track ticketing KPIs and handovers.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="cta" class="section">
+            <h3>Want a downloadable CV?</h3>
+            <p class="lead">Click the "Export CV" button above to generate a PDF version of this portfolio. The PDF will include all the content on this page in a professional format.</p>
+          </section>
+        </div>
+
+        <aside>
+          <h3>Contact & Socials</h3>
+          <p style="color:var(--text-muted)">Connect with me through these platforms.</p>
+
+          <div style="margin:16px 0" class="socials">
+            <a class="social" href="https://www.linkedin.com/in/sonu-herath" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a class="social" href="https://www.behance.net/sonuherath" target="_blank" rel="noopener noreferrer" title="Behance">
+              <i class="fab fa-behance"></i> Behance
+            </a>
+            <a class="social" href="https://github.com/sonuherath" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+
+          <hr style="opacity:.1;margin:16px 0">
+
+          <h4 style="margin:12px 0 8px">Contact Information</h4>
+          <p style="color:var(--text-muted);margin:0 0 8px">Phone: <strong>+94 70 491 7878</strong></p>
+          <p style="color:var(--text-muted);margin:0 0 12px">Email: <strong>sonu@2ndchancetravels.com</strong><br>
+          <strong>sonujvimukthi@gmail.com</strong></p>
+
+          <div style="display:flex;gap:12px;margin-top:16px">
+            <a class="btn ghost" href="#contact"><i class="fas fa-comment"></i> Message</a>
+            <a class="btn" href="#portfolio"><i class="fas fa-briefcase"></i> Work</a>
+          </div>
+
+          <hr style="opacity:.1;margin:16px 0">
+
+          <div style="font-size:14px;color:var(--text-muted)"><strong>Availability</strong><br>Currently not open to new roles (happy to connect).</div>
+        </aside>
+      </div>
+
+      <section id="contact" class="section" style="margin-top:28px">
+        <h3>Contact me</h3>
+        <p class="lead">Prefer email: <a href="mailto:sonu@2ndchancetravels.com">sonu@2ndchancetravels.com</a> or <a href="mailto:sonujvimukthi@gmail.com">sonujvimukthi@gmail.com</a>. Or send a quick message below (this simple form uses a mailto fallback).</p>
+
+        <form onsubmit="handleForm(event)">
+          <div class="row">
+            <input id="name" placeholder="Your name" required />
+            <input id="email" type="email" placeholder="Your email" required />
+          </div>
+          <textarea id="message" rows="4" placeholder="Message" required style="margin-top:12px"></textarea>
+          <button class="btn send" type="submit"><i class="fas fa-paper-plane"></i> Send message</button>
+        </form>
+      </section>
+
+      <footer>
+        <div>© Sonu Herath — Travel & Ticketing · Built with care</div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- MINI-GAME MODAL -->
+  <div id="gameModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="gameTitle">
+    <div class="modal-card">
+      <button class="close-x" id="closeGame">✕</button>
+      <h3 id="gameTitle">Flight Badge Collector</h3>
+      <p style="color:var(--text-muted);margin-top:6px">Collect badges by flying through them. Use arrow keys or touch/drag the plane.</p>
+      
+      <div class="game-instructions">
+        <div><i class="fas fa-arrow-up"></i> <i class="fas fa-arrow-down"></i> <i class="fas fa-arrow-left"></i> <i class="fas fa-arrow-right"></i> Move the plane</div>
+        <div><i class="fas fa-bullseye"></i> Collect all 4 skill badges to win</div>
+      </div>
+      
+      <canvas id="gameCanvas" class="mini-canvas" width="752" height="400" aria-label="Mini game canvas"></canvas>
+      
+      <div class="badge-counter" style="margin-top:16px">
+        <span>Collected:</span>
+        <span class="badge" id="badgeCount">0/4</span>
+        <span id="collectedList" style="margin-left:8px">none</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Profile image rotation
+    const profileImages = [
+      'https://res.cloudinary.com/ddnx4tnqy/image/upload/Sonu_Herath_01.jpg',
+      'https://res.cloudinary.com/ddnx4tnqy/image/upload/Sonu_Herath_02.jpg',
+      'https://res.cloudinary.com/ddnx4tnqy/image/upload/Sonu_Herath_03.jpg'
+    ];
+    
+    let currentImageIndex = 0;
+    const avatarElement = document.getElementById('profile-avatar');
+    
+    function updateProfileImage() {
+      avatarElement.style.backgroundImage = `url('${profileImages[currentImageIndex]}')`;
+      avatarElement.innerHTML = ''; // Remove the "SH" text when image is loaded
+      currentImageIndex = (currentImageIndex + 1) % profileImages.length;
+    }
+    
+    // Initialize with first image and set interval to rotate
+    updateProfileImage();
+    setInterval(updateProfileImage, 10000); // Change every 10 seconds
+
+    // Initialize skill bars animation
+    function animateSkillBars() {
+      document.querySelectorAll('.bar > .fill').forEach(el => {
+        const w = el.getAttribute('data-width') || '60%';
+        requestAnimationFrame(() => { el.style.width = w; });
+      });
+    }
+    
+    // Observe when skills section is in view
+    const skillsEl = document.getElementById('skills');
+    if (skillsEl) {
+      const skObs = new IntersectionObserver((entries, observer) => { 
+        entries.forEach(en => { 
+          if (en.isIntersecting) { 
+            animateSkillBars(); 
+            observer.disconnect(); 
+          } 
+        }); 
+      }, { threshold: 0.2 });
+      skObs.observe(skillsEl);
+    } else { 
+      animateSkillBars(); 
+    }
+    
+    // Contact form handler
+    function handleForm(e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const msg = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = encodeURIComponent('Website contact from ' + decodeURIComponent(name));
+      const body = encodeURIComponent('Name: ') + name + encodeURIComponent('\nEmail: ') + email + encodeURIComponent('\n\n') + msg;
+      window.location.href = `mailto:sonu@2ndchancetravels.com?subject=${subject}&body=${body}`;
+    }
+    
+    // PDF Export functionality
+    document.getElementById('exportPdf').addEventListener('click', generatePdf);
+    
+    function generatePdf() {
+      const progressModal = document.getElementById('progressModal');
+      const progressBar = document.getElementById('progressBar');
+      const progressFile = document.getElementById('progressFile');
+      const progressClose = document.getElementById('progressClose');
+      
+      // Show progress modal
+      progressModal.classList.add('active');
+      
+      // Simulate progress
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress += Math.random() * 10;
+        if (progress > 100) progress = 100;
+        progressBar.style.width = `${progress}%`;
+        
+        if (progress === 100) {
+          clearInterval(interval);
+          progressFile.textContent = "Document complete: Sonu_Herath_CV.pdf";
+          progressClose.disabled = false;
+        }
+      }, 200);
+      
+      // Generate PDF after a short delay to show progress
+      setTimeout(() => {
+        const element = document.getElementById('cv-content');
+        const opt = {
+          margin: 10,
+          filename: 'Sonu_Herath_CV.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        
+        html2pdf().set(opt).from(element).save().then(() => {
+          clearInterval(interval);
+          progressBar.style.width = '100%';
+          progressFile.textContent = "Document complete: Sonu_Herath_CV.pdf";
+          progressClose.disabled = false;
+        });
+      }, 1500);
+    }
+    
+    // Progress modal controls
+    document.getElementById('closeProgress').addEventListener('click', () => {
+      document.getElementById('progressModal').classList.remove('active');
+    });
+    
+    document.getElementById('progressClose').addEventListener('click', () => {
+      document.getElementById('progressModal').classList.remove('active');
+    });
+    
+    // MINI-GAME: Enhanced Flight Badge Collector
+    const playBtn = document.getElementById('playGame');
+    const modal = document.getElementById('gameModal');
+    const closeGame = document.getElementById('closeGame');
+    const gameCanvas = document.getElementById('gameCanvas');
+    const gctx = gameCanvas.getContext('2d');
+    
+    // Set proper canvas dimensions for high DPI displays
+    function setupCanvas() {
+      const dpr = Math.max(1, window.devicePixelRatio || 1);
+      const rect = gameCanvas.getBoundingClientRect();
+      gameCanvas.width = rect.width * dpr;
+      gameCanvas.height = rect.height * dpr;
+      gctx.scale(dpr, dpr);
+    }
+    
+    let plane = { x: 80, y: 200, w: 40, h: 24, vx: 0, vy: 0 };
+    let badges = [];
+    let collected = new Set();
+    const categories = [
+      { id: 'cat-design', label: 'Vector Graphics & Animations', color: '#ff9500' },
+      { id: 'cat-ticketing', label: 'Ticketing (GDS & NDC)', color: '#0071e3' },
+      { id: 'cat-it', label: 'IT & Maintenance', color: '#34c759' },
+      { id: 'cat-programming', label: 'Programming & AI', color: '#af52de' }
+    ];
+    
+    // Improved badge graphics
+    function createBadgeGraphic(label, color) {
+      const canvas = document.createElement('canvas');
+      canvas.width = 60;
+      canvas.height = 60;
+      const ctx = canvas.getContext('2d');
+      
+      // Draw badge background
+      ctx.beginPath();
+      ctx.arc(30, 30, 28, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+      
+      // Add shine effect
+      ctx.beginPath();
+      ctx.arc(40, 20, 10, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+      ctx.fill();
+      
+      // Add text
+      ctx.font = 'bold 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto';
+      ctx.fillStyle = 'white';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(label, 30, 30);
+      
+      return canvas;
+    }
+    
+    function spawnBadges() {
+      badges = [];
+      const items = [
+        { cat: 0, label: 'Vectors', graphic: null },
+        { cat: 0, label: 'Motion', graphic: null },
+        { cat: 1, label: 'Travelport', graphic: null },
+        { cat: 1, label: 'NDC', graphic: null },
+        { cat: 2, label: 'Sheets', graphic: null },
+        { cat: 2, label: 'Ops', graphic: null },
+        { cat: 3, label: 'React', graphic: null },
+        { cat: 3, label: 'AppsScript', graphic: null }
+      ];
+      
+      // Create graphics for badges
+      items.forEach((it, i) => {
+        it.graphic = createBadgeGraphic(it.label, categories[it.cat].color);
+      });
+      
+      // Place 6 random badges
+      for (let i = 0; i < 6; i++) {
+        const it = items[Math.floor(Math.random() * items.length)];
+        badges.push({
+          x: 120 + Math.random() * (gameCanvas.width - 240),
+          y: 60 + Math.random() * (gameCanvas.height - 120),
+          w: 30, h: 30,
+          label: it.label,
+          cat: it.cat,
+          angle: Math.random() * Math.PI * 2,
+          graphic: it.graphic,
+          collected: false
+        });
+      }
+    }
+    
+    function resetGame() {
+      const rect = gameCanvas.getBoundingClientRect();
+      plane.x = 80;
+      plane.y = rect.height / 2;
+      plane.vx = 0;
+      plane.vy = 0;
+      collected.clear();
+      spawnBadges();
+      updateCollectedUI();
+    }
+    
+    function drawGame() {
+      const width = gameCanvas.width;
+      const height = gameCanvas.height;
+      
+      // Clear canvas with a subtle gradient
+      const gradient = gctx.createLinearGradient(0, 0, width, height);
+      gradient.addColorStop(0, 'rgba(245, 247, 250, 0.8)');
+      gradient.addColorStop(1, 'rgba(225, 230, 240, 0.8)');
+      gctx.fillStyle = gradient;
+      gctx.fillRect(0, 0, width, height);
+      
+      // Draw grid lines for background
+      gctx.strokeStyle = 'rgba(0, 0, 0, 0.05)';
+      gctx.lineWidth = 1;
+      
+      // Vertical lines
+      for (let x = 0; x < width; x += 40) {
+        gctx.beginPath();
+        gctx.moveTo(x, 0);
+        gctx.lineTo(x, height);
+        gctx.stroke();
+      }
+      
+      // Horizontal lines
+      for (let y = 0; y < height; y += 40) {
+        gctx.beginPath();
+        gctx.moveTo(0, y);
+        gctx.lineTo(width, y);
+        gctx.stroke();
+      }
+      
+      // Draw badges with pulsing effect
+      badges.forEach(b => {
+        if (b.collected) return;
+        
+        const pulse = Math.sin(b.angle) * 0.1 + 1;
+        gctx.save();
+        gctx.translate(b.x, b.y);
+        gctx.rotate(Math.sin(b.angle * 0.7) * 0.2);
+        gctx.scale(pulse, pulse);
+        
+        // Draw the pre-rendered badge graphic
+        gctx.drawImage(b.graphic, -b.w, -b.h, b.w * 2, b.h * 2);
+        
+        // Add glow effect
+        gctx.shadowColor = categories[b.cat].color;
+        gctx.shadowBlur = 10;
+        gctx.drawImage(b.graphic, -b.w, -b.h, b.w * 2, b.h * 2);
+        gctx.restore();
+      });
+      
+      // Draw plane with improved graphics
+      gctx.save();
+      gctx.translate(plane.x, plane.y);
+      gctx.rotate(Math.atan2(plane.vy, plane.vx) + Math.PI / 2);
+      
+      // Plane body
+      gctx.fillStyle = '#0071e3';
+      gctx.beginPath();
+      gctx.moveTo(0, -plane.h);
+      gctx.lineTo(-plane.w / 2, plane.h / 2);
+      gctx.lineTo(0, plane.h / 4);
+      gctx.lineTo(plane.w / 2, plane.h / 2);
+      gctx.closePath();
+      gctx.fill();
+      
+      // Plane details
+      gctx.fillStyle = '#0056b3';
+      gctx.fillRect(-4, -4, 8, plane.h / 2);
+      
+      // Plane windows
+      gctx.fillStyle = '#af52de';
+      gctx.beginPath();
+      gctx.arc(0, -plane.h / 3, 3, 0, Math.PI * 2);
+      gctx.fill();
+      
+      gctx.fillStyle = 'white';
+      gctx.beginPath();
+      gctx.arc(0, -plane.h / 3, 1.5, 0, Math.PI * 2);
+      gctx.fill();
+      
+      // Add engine
+      gctx.fillStyle = '#1d1d1f';
+      gctx.fillRect(-plane.w / 2 + 5, -2, 6, 4);
+      gctx.fillRect(plane.w / 2 - 11, -2, 6, 4);
+      
+      // Add contrail if moving
+      if (Math.abs(plane.vx) > 0.1 || Math.abs(plane.vy) > 0.1) {
+        gctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+        gctx.beginPath();
+        gctx.ellipse(0, plane.h, 8, 3, Math.atan2(plane.vy, plane.vx) + Math.PI / 2, 0, Math.PI * 2);
+        gctx.fill();
+      }
+      
+      gctx.restore();
+      
+      // Draw HUD
+      gctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+      gctx.fillRect(10, 10, 200, 40);
+      gctx.fillStyle = '#1d1d1f';
+      gctx.font = '14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto';
+      gctx.fillText('Collected: ' + collected.size + '/4 badges', 20, 35);
+    }
+    
+    let gameRunning = false;
+    let lastTime = 0;
+    
+    function gameLoop(t) {
+      if (!gameRunning) return;
+      
+      const dt = Math.min(32, t - lastTime);
+      lastTime = t;
+      
+      // Update plane position
+      plane.x += plane.vx * dt / 16;
+      plane.y += plane.vy * dt / 16;
+      
+      // Boundary checking
+      plane.x = Math.max(20, Math.min(gameCanvas.width - 20, plane.x));
+      plane.y = Math.max(20, Math.min(gameCanvas.height - 20, plane.y));
+      
+      // Animate badges
+      badges.forEach(b => {
+        b.angle += 0.01;
+        b.x += Math.sin(b.angle) * 0.2;
+        b.y += Math.cos(b.angle * 0.7) * 0.15;
+      });
+      
+      // Check collisions
+      badges = badges.filter(b => {
+        if (b.collected) return false;
+        
+        const dx = b.x - plane.x;
+        const dy = b.y - plane.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        if (dist < 30) {
+          b.collected = true;
+          collected.add(categories[b.cat].id);
+          highlightCategory(categories[b.cat].id);
+          updateCollectedUI();
+          
+          // Add a visual effect when collecting
+          setTimeout(() => {
+            if (collected.size === 4) {
+              // Player won!
+              alert('Congratulations! You collected all skill badges!');
+            }
+          }, 300);
+          
+          return false;
+        }
+        return true;
+      });
+      
+      drawGame();
+      requestAnimationFrame(gameLoop);
+    }
+    
+    function highlightCategory(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.classList.add('collected');
+    }
+    
+    function updateCollectedUI() {
+      const el = document.getElementById('collectedList');
+      const badgeCount = document.getElementById('badgeCount');
+      if (!el) return;
+      
+      const names = Array.from(collected).map(id => {
+        const cat = categories.find(c => c.id === id);
+        return cat ? cat.label : id;
+      });
+      
+      el.textContent = names.length ? names.join(' • ') : 'none';
+      badgeCount.textContent = `${collected.size}/4`;
+    }
+    
+    // Controls
+    const keys = {};
+    window.addEventListener('keydown', e => {
+      if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'a', 'd', 'w', 's'].includes(e.key)) {
+        keys[e.key] = true;
+        updateVelocity();
+      }
+    });
+    
+    window.addEventListener('keyup', e => {
+      if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'a', 'd', 'w', 's'].includes(e.key)) {
+        keys[e.key] = false;
+        updateVelocity();
+      }
+    });
+    
+    function updateVelocity() {
+      plane.vx = 0;
+      plane.vy = 0;
+      
+      if (keys['ArrowLeft'] || keys['a']) plane.vx = -3.5;
+      if (keys['ArrowRight'] || keys['d']) plane.vx = 3.5;
+      if (keys['ArrowUp'] || keys['w']) plane.vy = -3.5;
+      if (keys['ArrowDown'] || keys['s']) plane.vy = 3.5;
+      
+      // Normalize diagonal movement
+      if (plane.vx !== 0 && plane.vy !== 0) {
+        plane.vx *= 0.707;
+        plane.vy *= 0.707;
+      }
+    }
+    
+    // Touch support
+    let dragging = false;
+    gameCanvas.addEventListener('pointerdown', e => {
+      dragging = true;
+      const r = gameCanvas.getBoundingClientRect();
+      plane.x = e.clientX - r.left;
+      plane.y = e.clientY - r.top;
+    });
+    
+    window.addEventListener('pointermove', e => {
+      if (dragging) {
+        const r = gameCanvas.getBoundingClientRect();
+        plane.x = e.clientX - r.left;
+        plane.y = e.clientY - r.top;
+      }
+    });
+    
+    window.addEventListener('pointerup', () => {
+      dragging = false;
+    });
+    
+    // Modal controls
+    playBtn.addEventListener('click', () => {
+      modal.classList.add('active');
+      setupCanvas();
+      resetGame();
+      gameRunning = true;
+      lastTime = performance.now();
+      requestAnimationFrame(gameLoop);
+    });
+    
+    closeGame.addEventListener('click', () => {
+      modal.classList.remove('active');
+      gameRunning = false;
+    });
+    
+    // Close modal with Escape key
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        gameRunning = false;
+      }
+    });
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        gameRunning = false;
+      }
+    });
+    
+    // Initialize on window load
+    window.addEventListener('load', () => {
+      animateSkillBars();
+    });
+  </script>
+</body>
+</html>
